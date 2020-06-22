@@ -1,11 +1,5 @@
 import React from 'react';
 import { Header } from './components/Header';
-import { Balance } from './components/Balance';
-import { AddTransaction } from './components/AddTransaction';
-import { IncomeExpenses } from './components/IncomeExpenses';
-import { Transaction } from './components/Transaction';
-import { TransactionList } from './components/TransactionList';
-
 import { Paper } from '@material-ui/core';
 
 
