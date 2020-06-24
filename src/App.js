@@ -1,20 +1,32 @@
 import React from 'react';
+import './App.css';
+
+
 import { Header } from './components/Header';
-import { Paper } from '@material-ui/core';
+import { Balance } from './components/Balance';
+import { IncomeExpenses } from './components/IncomeExpenses';
+import { TransactionList } from './components/TransactionList';
+import { AddTransaction } from './components/AddTransaction';
+import { Paper, Box } from '@material-ui/core';
 
-
-
-
-
-
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
 
-  return (
 
-    <Paper style={{ marginTop: 100, marginLeft: 250, marginRight: 250, marginBottom: 100, height: '100vh', backgroundColor: '#fafafa' }} elevation={3}>
+  return (
+  <GlobalProvider>
+    <Paper elevation={3} >
       <Header />
+      <Box className="container">
+        <Balance />
+        <br/>
+        <IncomeExpenses />
+        <TransactionList />
+        <AddTransaction />
+      </Box>
     </Paper>
+  </GlobalProvider>
   );
 }
 
